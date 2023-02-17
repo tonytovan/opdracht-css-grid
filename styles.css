@@ -1,1 +1,68 @@
-/*Maak hier jouw CSS!*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: antiquewhite;
+}
+
+.item {
+    background-color: hsl(355, 52%, 48%);
+    padding: 16px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border: 2px solid hsl(355, 52%, 38%);
+}
+
+
+
+
+.item-a {
+    grid-area: a;
+}
+
+.item-b {
+    grid-area: b;
+}
+
+.item-c {
+    grid-area: c;
+}
+
+.item-d {
+    grid-area: d;
+}
+
+.item-e {
+    grid-area: e;
+}
+
+.item-f {
+    grid-area: f;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 50px 190px 100px auto 50px;
+    grid-gap: 16px;
+    grid-template-areas:
+    "a c c"
+    "b c c"
+    "b e d"
+    "b e ."
+    "f f f";
+}
+
+div {
+    width: 0;
+    height: 0;
+    border-right: 20px solid transparent;
+    border-left: 20px solid transparent;
+    border-bottom: 20px solid black;
+
+}
